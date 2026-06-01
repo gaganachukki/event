@@ -296,9 +296,8 @@
           // Simulate API call
           setTimeout(() => {
             showToast('Message sent successfully! We will contact you soon.');
-            form.reset();
-            btn.innerHTML = originalText;
-            btn.disabled = false;
+            // Redirect to 404 page
+            window.location.href = '404.html';
           }, 1500);
         }
       });
