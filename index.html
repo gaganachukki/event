@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly - Premium Event Management. From dazzling weddings to groundbreaking corporate galas, we curate high-end, immersive occasions designed to captivate your audience.">
+  <title>Stackly — Premium Event Management</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="mobile-login">Login</a>
+      </div>
+
+      <div class="nav-right">
+        <a href="login.html" class="btn-login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          Login
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ======== HERO SECTION ======== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-effects">
+      <div class="hero-glow"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="section-label">
+          <span class="star">✦</span>
+          PREMIUM EVENT EXPERIENCES
+        </span>
+        <h1 class="hero-title">
+          Make Every Event<br>
+          <span class="gradient-text">Unforgettable</span>
+        </h1>
+        <p class="hero-description">
+          From dazzling weddings to groundbreaking corporate galas, we curate
+          high-end, immersive occasions designed to captivate your audience.
+        </p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn-primary">
+            Book Event
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="events.html" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            Explore Events
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-img-wrapper">
+          <img src="assets/hero-event-venue.webp" alt="Premium Event Venue" loading="eager">
+          <div class="hero-img-overlay"></div>
+          <div class="hero-date-badge">
+            <span class="date-number">26</span>
+            <span class="date-label">Upcoming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="container">
+      <div class="hero-features">
+        <div class="feature-card glass-card animate-on-scroll">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Bespoke Experiences</h3>
+            <p>Tailored events that reflect your vision and style.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card animate-on-scroll">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Flawless Execution</h3>
+            <p>Our expert team ensures seamless planning and delivery.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card animate-on-scroll">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Unmatched Creativity</h3>
+            <p>Innovative ideas and stunning designs that leave a lasting impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SEARCH BAR ======== -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-bar glass-card">
+        <div class="search-field">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search events...">
+        </div>
+        <div class="search-field">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <select id="categorySelect">
+            <option value="">Choose Category</option>
+            <option value="wedding">Wedding</option>
+            <option value="corporate">Corporate</option>
+            <option value="concert">Concert</option>
+            <option value="conference">Conference</option>
+            <option value="birthday">Birthday</option>
+            <option value="gala">Gala</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <select id="locationSelect">
+            <option value="">Choose Location</option>
+            <option value="new-york">New York</option>
+            <option value="los-angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="miami">Miami</option>
+            <option value="london">London</option>
+          </select>
+        </div>
+        <button class="btn-primary search-btn" id="searchBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          Find Events
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FEATURED EVENTS ======== -->
+  <section class="section featured-section" id="featuredEvents">
+    <div class="container">
+      <div class="section-top">
+        <div>
+          <span class="section-label"><span class="star">✦</span> CURATED FOR YOU</span>
+          <h2 class="section-title">Featured <span>Events</span></h2>
+        </div>
+        <a href="events.html" class="view-all-link">
+          View All Events
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="events-grid">
+        <div class="event-card animate-on-scroll">
+          <div class="event-image">
+            <img src="assets/wedding-ceremony.webp" alt="Royal Wedding Ceremony">
+            <div class="event-badge">Wedding</div>
+            <button class="event-fav" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="event-content">
+            <div class="event-meta">
+              <span class="event-date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Dec 15, 2026
+              </span>
+              <span class="event-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                New York
+              </span>
+            </div>
+            <h3 class="event-title">Royal Wedding Ceremony</h3>
+            <p class="event-desc">An elegant celebration of love with world-class décor and gourmet dining.</p>
+            <div class="event-footer">
+              <span class="event-price">From $5,000</span>
+              <a href="events.html" class="btn-small btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card animate-on-scroll">
+          <div class="event-image">
+            <img src="assets/tech-summit.webp" alt="Tech Summit 2026">
+            <div class="event-badge">Corporate</div>
+            <button class="event-fav" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="event-content">
+            <div class="event-meta">
+              <span class="event-date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Jan 20, 2027
+              </span>
+              <span class="event-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                San Francisco
+              </span>
+            </div>
+            <h3 class="event-title">Tech Summit 2026</h3>
+            <p class="event-desc">A groundbreaking conference bringing together the brightest minds in technology.</p>
+            <div class="event-footer">
+              <span class="event-price">From $800</span>
+              <a href="events.html" class="btn-small btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card animate-on-scroll">
+          <div class="event-image">
+            <img src="assets/music-festival.webp" alt="Summer Music Festival">
+            <div class="event-badge">Concert</div>
+            <button class="event-fav" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="event-content">
+            <div class="event-meta">
+              <span class="event-date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Mar 10, 2027
+              </span>
+              <span class="event-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Los Angeles
+              </span>
+            </div>
+            <h3 class="event-title">Summer Music Festival</h3>
+            <p class="event-desc">An unforgettable night of live music featuring world-renowned artists.</p>
+            <div class="event-footer">
+              <span class="event-price">From $150</span>
+              <a href="events.html" class="btn-small btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card animate-on-scroll">
+          <div class="event-image">
+            <img src="assets/charity-gala.webp" alt="Annual Charity Gala">
+            <div class="event-badge">Gala</div>
+            <button class="event-fav" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="event-content">
+            <div class="event-meta">
+              <span class="event-date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Feb 14, 2027
+              </span>
+              <span class="event-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Miami
+              </span>
+            </div>
+            <h3 class="event-title">Annual Charity Gala</h3>
+            <p class="event-desc">A prestigious evening of fine dining, entertainment, and philanthropy.</p>
+            <div class="event-footer">
+              <span class="event-price">From $2,500</span>
+              <a href="events.html" class="btn-small btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== WHY CHOOSE US ======== -->
+  <section class="section why-section" id="whyUs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> WHY STACKLY</span>
+        <h2 class="section-title">Why Choose <span>Us</span></h2>
+        <p class="section-subtitle">We combine creativity, precision, and passion to deliver events that exceed expectations.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card glass-card animate-on-scroll">
+          <div class="why-number">01</div>
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Expert Team</h3>
+          <p>Our seasoned event planners bring years of industry expertise to every project.</p>
+        </div>
+
+        <div class="why-card glass-card animate-on-scroll">
+          <div class="why-number">02</div>
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Trusted & Reliable</h3>
+          <p>With a track record of 500+ successful events, your vision is in safe hands.</p>
+        </div>
+
+        <div class="why-card glass-card animate-on-scroll">
+          <div class="why-number">03</div>
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+          <h3>Client-Centric</h3>
+          <p>Your satisfaction is our top priority — we listen, adapt, and deliver beyond expectations.</p>
+        </div>
+
+        <div class="why-card glass-card animate-on-scroll">
+          <div class="why-number">04</div>
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3>Scalable Solutions</h3>
+          <p>From intimate gatherings to grand-scale galas, we handle events of every size.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS ======== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+          <span class="stat-label">Events Completed</span>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-number" data-target="120" data-suffix="+">0+</span>
+          <span class="stat-label">Expert Planners</span>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-number" data-target="98" data-suffix="%">0%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-number" data-target="25" data-suffix="+">0+</span>
+          <span class="stat-label">Cities Worldwide</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> TESTIMONIALS</span>
+        <h2 class="section-title">What Our <span>Clients Say</span></h2>
+        <p class="section-subtitle">Hear from the people who trusted Stackly to bring their vision to life.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Stackly transformed our corporate gala into a truly magical experience. The attention to detail was extraordinary, and our guests are still raving about it."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div>
+              <h4>James Davidson</h4>
+              <span>CEO, TechVentures</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Our wedding was everything we dreamed of and more. Stackly's team handled every detail with grace and professionalism. We couldn't have asked for a better day."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div>
+              <h4>Sarah & Kevin</h4>
+              <span>Wedding Clients</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"From planning to execution, Stackly delivered a conference that exceeded our expectations. Their creative approach and reliability set them apart from the rest."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MP</div>
+            <div>
+              <h4>Maria Petrov</h4>
+              <span>Director, Global Events Inc.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA SECTION ======== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <span class="section-label"><span class="star">✦</span> GET STARTED</span>
+          <h2 class="section-title">Ready to Create Your <span>Dream Event?</span></h2>
+          <p class="section-subtitle">Let's collaborate to design an event that will be remembered for a lifetime. Get in touch with our team today.</p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn-primary">
+              Start Planning
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a href="services.html" class="btn-secondary">View Services</a>
+          </div>
+        </div>
+        <div class="cta-decoration">
+          <div class="cta-circle"></div>
+          <div class="cta-circle cta-circle-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img"></a>
+          <p>Premium event management platform delivering unforgettable experiences worldwide. Your vision, our expertise.</p>
+          <div class="footer-socials">
+            <a href="404.html" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="404.html" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="404.html" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Wedding Planning</a></li>
+            <li><a href="services.html">Corporate Events</a></li>
+            <li><a href="services.html">Concert Management</a></li>
+            <li><a href="services.html">Birthday Parties</a></li>
+            <li><a href="services.html">Gala Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><a href="mailto:hello@stackly.com">hello@stackly.com</a></li>
+            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><a href="contact.html">Salem, Tamil Nadu</a></li>
+            <li><a href="contact.html">Mon - Fri: 9AM - 6PM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Index-specific: Stats counter animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const statNumbers = document.querySelectorAll('.stat-number');
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix || '';
+            animateCounter(el, target, 2000);
+            el.dataset.suffix = suffix;
+            statsObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      statNumbers.forEach(el => statsObserver.observe(el));
+
+      // Hero particles
+      createParticles(document.getElementById('heroParticles'), 15);
+
+      // Search button
+      document.getElementById('searchBtn')?.addEventListener('click', () => {
+        const query = document.getElementById('searchInput').value;
+        const category = document.getElementById('categorySelect').value;
+        const location = document.getElementById('locationSelect').value;
+        
+        if (!query && !category && !location) {
+          showToast('Please enter a search term or select a filter');
+          return;
+        }
+        window.location.href = `events.html?search=${encodeURIComponent(query)}&category=${category}&location=${location}`;
+      });
+
+      // Favorite buttons
+      document.querySelectorAll('.event-fav').forEach(btn => {
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('active');
+          const isFav = btn.classList.contains('active');
+          if (isFav) {
+            btn.querySelector('svg').setAttribute('fill', 'var(--accent-light)');
+            showToast('Added to favorites ♥');
+          } else {
+            btn.querySelector('svg').setAttribute('fill', 'none');
+            showToast('Removed from favorites');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

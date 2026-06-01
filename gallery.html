@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View our portfolio of premium events curated by Stackly.">
+  <title>Gallery — Stackly</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="mobile-login">Login</a>
+      </div>
+      <div class="nav-right">
+        <a href="login.html" class="btn-login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Login
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label"><span class="star">✦</span> OUR PORTFOLIO</span>
+      <h1 class="section-title">Event <span>Gallery</span></h1>
+      <p class="section-subtitle" style="margin: 0 auto;">A visual journey through some of our most spectacular and memorable events.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span>Gallery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GALLERY FILTERS ======== -->
+  <div class="gallery-filters-wrapper">
+    <div class="container">
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wedding">Weddings</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="party">Private Parties</button>
+        <button class="filter-btn" data-filter="concert">Concerts</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== MASONRY GALLERY ======== -->
+  <section class="section gallery-section">
+    <div class="container">
+      <div class="masonry-grid" id="masonryGrid">
+        
+        <!-- Item 1 -->
+        <div class="masonry-item" data-category="wedding">
+          <img src="assets/wedding-ceremony.webp" alt="Elegant Wedding Table Setting">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Wedding</span>
+            <h3>The Royal Orchid Wedding</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="masonry-item" data-category="corporate">
+          <img src="assets/tech-summit.webp" alt="Tech Conference Keynote">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Corporate</span>
+            <h3>Global Tech Summit 2025</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="masonry-item" data-category="concert">
+          <img src="assets/music-festival.webp" alt="Live Music Festival">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Concert</span>
+            <h3>Neon Nights Festival</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="masonry-item" data-category="wedding">
+          <img src="assets/beach-wedding.webp" alt="Beach Wedding Ceremony">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Wedding</span>
+            <h3>Sunset Beach Vows</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="masonry-item" data-category="party">
+          <img src="assets/party-dj.webp" alt="VIP DJ Party">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Party</span>
+            <h3>Exclusive Club Takeover</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="masonry-item" data-category="corporate">
+          <img src="assets/charity-gala.webp" alt="Gala Dinner">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Corporate</span>
+            <h3>Annual Awards Gala</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="masonry-item" data-category="wedding">
+          <img src="assets/wedding-decor.webp" alt="Floral Wedding Arch">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Wedding</span>
+            <h3>Botanical Garden Romance</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="masonry-item" data-category="party">
+          <img src="assets/birthday-bash.webp" alt="Birthday Celebration">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Party</span>
+            <h3>Golden Jubilee Birthday</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="masonry-item" data-category="concert">
+          <img src="assets/concert-lights.webp" alt="EDM Concert Lights">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Concert</span>
+            <h3>Midnight Sound Waves</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="load-more-container">
+        <button class="btn-secondary" id="loadMoreBtn">Load More Photos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <img src="" alt="Gallery Image" class="lightbox-img" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img"></a>
+          <p>Premium event management platform delivering unforgettable experiences worldwide. Your vision, our expertise.</p>
+          <div class="footer-socials">
+            <a href="404.html" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="404.html" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="404.html" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Wedding Planning</a></li>
+            <li><a href="services.html">Corporate Events</a></li>
+            <li><a href="services.html">Concert Management</a></li>
+            <li><a href="services.html">Birthday Parties</a></li>
+            <li><a href="services.html">Gala Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><a href="mailto:hello@stackly.com">hello@stackly.com</a></li>
+            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><a href="contact.html">Salem, Tamil Nadu</a></li>
+            <li><a href="contact.html">Mon - Fri: 9AM - 6PM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Simple filtering
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const items = document.querySelectorAll('.masonry-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+
+          items.forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter) {
+              item.style.display = 'block';
+              setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.8)';
+              setTimeout(() => { item.style.display = 'none'; }, 300);
+            }
+          });
+        });
+      });
+
+      // Lightbox functionality
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      const closeBtn = document.getElementById('lightboxClose');
+
+      document.querySelectorAll('.zoom-btn, .masonry-item img').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          const item = e.target.closest('.masonry-item');
+          const img = item.querySelector('img').src;
+          const title = item.querySelector('h3').textContent;
+          
+          lightboxImg.src = img;
+          lightboxCaption.textContent = title;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
