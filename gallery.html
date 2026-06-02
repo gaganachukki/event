@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
+  <!-- ======== PRELOADER ======== -->
+  <div id="preloader">
+    <img src="assets/logo.webp" alt="Stackly Logo">
+  </div>
+
 
   <!-- ======== NAVBAR ======== -->
   <nav class="navbar" id="navbar">
@@ -157,10 +162,196 @@
           </div>
         </div>
 
+        <!-- Item 10 -->
+        <div class="masonry-item" data-category="wedding">
+          <img src="assets/event-daytime-01.webp" alt="Outdoor Wedding Venue">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Wedding</span>
+            <h3>Garden Terrace Nuptials</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="masonry-item" data-category="party">
+          <img src="assets/event-daytime-02.webp" alt="Birthday Party Setup">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Party</span>
+            <h3>Summer Celebration Bash</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="masonry-item" data-category="corporate">
+          <img src="assets/event-daytime-03.webp" alt="Corporate Team Event">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Corporate</span>
+            <h3>Executive Team Building</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 13 -->
+        <div class="masonry-item" data-category="concert">
+          <img src="assets/event-daytime-04.webp" alt="Festival Stage Setup">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Concert</span>
+            <h3>Daytime Music Festival</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 14 -->
+        <div class="masonry-item" data-category="wedding">
+          <img src="assets/event-daytime-05.webp" alt="Luxury Wedding Reception">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Wedding</span>
+            <h3>Elegant Indoor Reception</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 15 -->
+        <div class="masonry-item" data-category="party">
+          <img src="assets/event-daytime-06.webp" alt="Garden Party Ambiance">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Party</span>
+            <h3>Enchanted Garden Soiree</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Item 16 -->
+        <div class="masonry-item" data-category="corporate">
+          <img src="assets/event-daytime-07.webp" alt="Conference Setup">
+          <div class="masonry-overlay">
+            <span class="masonry-category">Corporate</span>
+            <h3>International Conference</h3>
+            <button class="zoom-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+          </div>
+        </div>
+
       </div>
       
       <div class="load-more-container">
         <button class="btn-secondary" id="loadMoreBtn">Load More Photos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GALLERY CATEGORIES ======== -->
+  <section class="section gallery-categories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> BROWSE BY TYPE</span>
+        <h2 class="section-title">Gallery <span>Categories</span></h2>
+        <p class="section-subtitle">Explore our collection organized by event style and type.</p>
+      </div>
+      <div class="category-filters-showcase">
+        <div class="category-showcase-card animate-on-scroll">
+          <div class="category-count">45 Photos</div>
+          <h4>Weddings</h4>
+          <p>Love stories told through elegant ceremonies, romantic décor, and joyful celebrations.</p>
+        </div>
+        <div class="category-showcase-card animate-on-scroll">
+          <div class="category-count">38 Photos</div>
+          <h4>Corporate Galas</h4>
+          <p>Professional elegance and networking excellence captured in every frame.</p>
+        </div>
+        <div class="category-showcase-card animate-on-scroll">
+          <div class="category-count">52 Photos</div>
+          <h4>Celebrations</h4>
+          <p>Milestone moments, birthdays, and personal celebrations full of joy and energy.</p>
+        </div>
+        <div class="category-showcase-card animate-on-scroll">
+          <div class="category-count">31 Photos</div>
+          <h4>Conferences</h4>
+          <p>Professional gatherings, keynotes, and networking sessions captured perfectly.</p>
+        </div>
+        <div class="category-showcase-card animate-on-scroll">
+          <div class="category-count">27 Photos</div>
+          <h4>Entertainment</h4>
+          <p>Live performances, music festivals, and dynamic entertainment showcases.</p>
+        </div>
+        <div class="category-showcase-card animate-on-scroll">
+          <div class="category-count">19 Photos</div>
+          <h4>Awards & Galas</h4>
+          <p>Red-carpet moments, award ceremonies, and exclusive VIP experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FEATURED PORTFOLIOS ======== -->
+  <section class="section featured-portfolios-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> SHOWCASE</span>
+        <h2 class="section-title">Client <span>Portfolios</span></h2>
+        <p class="section-subtitle">In-depth looks at complete events we've created.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card animate-on-scroll">
+          <div class="portfolio-preview"></div>
+          <div class="portfolio-info">
+            <h4>Luxury Destination Wedding</h4>
+            <p class="portfolio-location">Santorini, Greece</p>
+            <p>A breathtaking 3-day wedding celebration at sunset with 150 international guests, custom yacht cruise, and beachfront ceremony.</p>
+            <a href="#" class="view-portfolio">View 42 Photos →</a>
+          </div>
+        </div>
+        <div class="portfolio-card animate-on-scroll">
+          <div class="portfolio-preview"></div>
+          <div class="portfolio-info">
+            <h4>Tech Summit Opening Gala</h4>
+            <p class="portfolio-location">San Francisco, CA</p>
+            <p>A cutting-edge event featuring interactive installations, celebrity speakers, and immersive experiences for 800 tech leaders.</p>
+            <a href="#" class="view-portfolio">View 56 Photos →</a>
+          </div>
+        </div>
+        <div class="portfolio-card animate-on-scroll">
+          <div class="portfolio-preview"></div>
+          <div class="portfolio-info">
+            <h4>Charity Ball & Auction</h4>
+            <p class="portfolio-location">New York, NY</p>
+            <p>An elegant evening raising funds for education with fine dining, live entertainment, and silent/live auctions for 400 guests.</p>
+            <a href="#" class="view-portfolio">View 38 Photos →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== BEHIND THE SCENES ======== -->
+  <section class="section behind-scenes-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> INSIDER ACCESS</span>
+        <h2 class="section-title">Behind the <span>Scenes</span></h2>
+        <p class="section-subtitle">The magic happens before the curtain rises. See how we bring events to life.</p>
+      </div>
+      <div class="bts-grid">
+        <div class="bts-card animate-on-scroll">
+          <div class="bts-icon">🎨</div>
+          <h4>Design & Setup</h4>
+          <p>From concept sketches to complete venue transformations, watch as blank spaces become immersive experiences.</p>
+        </div>
+        <div class="bts-card animate-on-scroll">
+          <div class="bts-icon">👥</div>
+          <h4>Team Coordination</h4>
+          <p>30+ professionals working seamlessly together—from catering to sound to logistics—orchestrating perfect moments.</p>
+        </div>
+        <div class="bts-card animate-on-scroll">
+          <div class="bts-icon">🔧</div>
+          <h4>Technical Magic</h4>
+          <p>State-of-the-art lighting, projection, sound systems, and technology that creates unforgettable experiences.</p>
+        </div>
+        <div class="bts-card animate-on-scroll">
+          <div class="bts-icon">✨</div>
+          <h4>Final Touches</h4>
+          <p>Last-minute details, final checks, and quality control ensuring everything is flawless for your guests.</p>
+        </div>
       </div>
     </div>
   </section>

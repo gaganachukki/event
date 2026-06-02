@@ -2,6 +2,11 @@
    STACKLY - Contact Page Styles
    ======================================== */
 
+/* ---------- Contact Page Hero ---------- */
+.page-hero {
+  background: linear-gradient(135deg, rgba(25, 28, 35, 0.75) 0%, rgba(25, 28, 35, 0.75) 100%), url('../assets/contact_hero.webp') center/cover no-repeat;
+}
+
 .contact-section {
   padding-top: 40px;
 }

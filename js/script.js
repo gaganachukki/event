@@ -1,11 +1,50 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
+  initSlideshow();
   initNavbar();
   initMobileMenu();
   initScrollAnimations();
   initBackToTop();
   initSmoothScroll();
 });
+
+// --------- Preloader ---------
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add('hide');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
+    }, 3000);
+  }
+}
+
+// --------- Slideshow ---------
+function initSlideshow() {
+  const slides = document.querySelectorAll('.slide');
+  if (slides.length === 0) return;
+
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Show first slide
+  showSlide(currentSlide);
+
+  // Auto advance slides every 12 seconds (matching animation duration)
+  setInterval(nextSlide, 12000);
+}
 
 // --------- Navbar Scroll Effect ---------
 function initNavbar() {
@@ -176,13 +215,20 @@ function animateCounter(element, target, duration = 2000) {
   const increment = target / (duration / 16);
   const suffix = element.dataset.suffix || '';
 
+  function formatNumber(num) {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(0) + 'K';
+    }
+    return num.toLocaleString();
+  }
+
   function update() {
     start += increment;
     if (start >= target) {
-      element.textContent = target.toLocaleString() + suffix;
+      element.textContent = formatNumber(target) + suffix;
       return;
     }
-    element.textContent = Math.floor(start).toLocaleString() + suffix;
+    element.textContent = formatNumber(Math.floor(start)) + suffix;
     requestAnimationFrame(update);
   }
 

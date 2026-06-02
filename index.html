@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+  <!-- ======== PRELOADER ======== -->
+  <div id="preloader">
+    <img src="assets/logo.webp" alt="Stackly Logo">
+  </div>
 
+ 
   <!-- ======== NAVBAR ======== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -48,8 +53,24 @@
 
   <!-- ======== HERO SECTION ======== -->
   <section class="hero" id="hero">
+    <div class="hero-bg-image">
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="assets/hero-slideshow-1.webp" alt="Premium Daytime Event">
+        </div>
+        <div class="slide fade">
+          <img src="assets/hero-slideshow-2.webp" alt="Outdoor Celebration">
+        </div>
+        <div class="slide fade">
+          <img src="assets/hero-slideshow-3.webp" alt="Wedding Reception">
+        </div>
+        <div class="slide fade">
+          <img src="assets/hero-slideshow-4.webp" alt="Corporate Gathering">
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-bg-effects">
-      <div class="hero-glow"></div>
       <div class="hero-particles" id="heroParticles"></div>
     </div>
     <div class="container hero-container">
@@ -83,16 +104,6 @@
             </svg>
             Explore Events
           </a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <div class="hero-img-wrapper">
-          <img src="assets/hero-event-venue.webp" alt="Premium Event Venue" loading="eager">
-          <div class="hero-img-overlay"></div>
-          <div class="hero-date-badge">
-            <span class="date-number">26</span>
-            <span class="date-label">Upcoming</span>
-          </div>
         </div>
       </div>
     </div>
@@ -398,79 +409,6 @@
     </div>
   </section>
 
-  <!-- ======== STATS ======== -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item animate-on-scroll">
-          <span class="stat-number" data-target="500" data-suffix="+">0+</span>
-          <span class="stat-label">Events Completed</span>
-        </div>
-        <div class="stat-item animate-on-scroll">
-          <span class="stat-number" data-target="120" data-suffix="+">0+</span>
-          <span class="stat-label">Expert Planners</span>
-        </div>
-        <div class="stat-item animate-on-scroll">
-          <span class="stat-number" data-target="98" data-suffix="%">0%</span>
-          <span class="stat-label">Client Satisfaction</span>
-        </div>
-        <div class="stat-item animate-on-scroll">
-          <span class="stat-number" data-target="25" data-suffix="+">0+</span>
-          <span class="stat-label">Cities Worldwide</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======== TESTIMONIALS ======== -->
-  <section class="section testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label"><span class="star">✦</span> TESTIMONIALS</span>
-        <h2 class="section-title">What Our <span>Clients Say</span></h2>
-        <p class="section-subtitle">Hear from the people who trusted Stackly to bring their vision to life.</p>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card glass-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Stackly transformed our corporate gala into a truly magical experience. The attention to detail was extraordinary, and our guests are still raving about it."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">JD</div>
-            <div>
-              <h4>James Davidson</h4>
-              <span>CEO, TechVentures</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card glass-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Our wedding was everything we dreamed of and more. Stackly's team handled every detail with grace and professionalism. We couldn't have asked for a better day."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SK</div>
-            <div>
-              <h4>Sarah & Kevin</h4>
-              <span>Wedding Clients</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card glass-card animate-on-scroll">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"From planning to execution, Stackly delivered a conference that exceeded our expectations. Their creative approach and reliability set them apart from the rest."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MP</div>
-            <div>
-              <h4>Maria Petrov</h4>
-              <span>Director, Global Events Inc.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ======== CTA SECTION ======== -->
   <section class="cta-section">
     <div class="container">
@@ -494,6 +432,71 @@
           <div class="cta-circle"></div>
           <div class="cta-circle cta-circle-2"></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TRENDING EVENTS ======== -->
+  <section class="section trending-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="star">✦</span> WHAT'S HOT</span>
+        <h2 class="section-title">Trending <span>Right Now</span></h2>
+        <p class="section-subtitle">The most popular event types and styles everyone is booking.</p>
+      </div>
+      <div class="trending-grid">
+        <div class="trending-card animate-on-scroll">
+          <div class="trending-badge">TRENDING</div>
+          <h3>Intimate Micro-Events</h3>
+          <p>Small gatherings with big impact. 50-100 guests, personalized experiences, luxury details at every touch point.</p>
+          <div class="trending-stats">342 bookings this month</div>
+        </div>
+        <div class="trending-card animate-on-scroll">
+          <div class="trending-badge">RISING</div>
+          <h3>Hybrid Experiences</h3>
+          <p>Blend digital and in-person seamlessly. Connect with guests worldwide while maintaining the magic of live events.</p>
+          <div class="trending-stats">287 bookings this month</div>
+        </div>
+        <div class="trending-card animate-on-scroll">
+          <div class="trending-badge">POPULAR</div>
+          <h3>Wellness Retreats</h3>
+          <p>Events focused on well-being. Yoga sessions, meditation workshops, spa services, and mindful celebrations.</p>
+          <div class="trending-stats">215 bookings this month</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS ======== -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-content">
+        <div class="section-header">
+          <span class="section-label"><span class="star">✦</span> BY THE NUMBERS</span>
+          <h2 class="section-title">Our Impact & <span>Excellence</span></h2>
+        </div>
+        <div class="stats-metrics">
+          <div class="stat-metric animate-on-scroll">
+            <div class="stat-number" data-target="500" data-suffix="+">0+</div>
+            <p class="stat-label">Events Delivered</p>
+          </div>
+          <div class="stat-metric animate-on-scroll">
+            <div class="stat-number" data-target="50000" data-suffix="+">0+</div>
+            <p class="stat-label">Happy Guests</p>
+          </div>
+          <div class="stat-metric animate-on-scroll">
+            <div class="stat-number" data-target="25" data-suffix="+">0+</div>
+            <p class="stat-label">Countries</p>
+          </div>
+          <div class="stat-metric animate-on-scroll">
+            <div class="stat-number" data-target="98" data-suffix="%">0%</div>
+            <p class="stat-label">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats-decoration">
+        <div class="decoration-circle"></div>
+        <div class="decoration-line"></div>
       </div>
     </div>
   </section>
