@@ -184,7 +184,8 @@
   position: absolute;
   top: -2px;
   right: -2px;
-  background: #ef4444;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 5px var(--accent-secondary);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -492,12 +493,34 @@
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
-    left: -260px;
+    left: -100%;
+    width: 100%;
     height: 100vh;
+    top: 0;
+    z-index: 1001;
+    overflow-y: auto;
   }
   
   .sidebar.active {
     left: 0;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: var(--transition-base);
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
   
   .menu-toggle-btn {

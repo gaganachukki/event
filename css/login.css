@@ -596,11 +596,12 @@
   }
   
   .login-form-container {
-    padding: 20px 16px;
+    padding: 60px 12px 20px 12px;
     min-height: auto;
     height: auto;
     justify-content: flex-start;
-    padding-top: 60px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .back-home {
@@ -613,6 +614,7 @@
     margin: 0 auto;
     max-width: 100%;
     width: 100%;
+    box-sizing: border-box;
   }
   
   .form-header {

@@ -48,6 +48,9 @@
     </div>
   </aside>
 
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <!-- Main Content -->
   <main class="main-content">
     
@@ -68,10 +71,6 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; margin-right: 6px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           New Event
         </button>
-        <div class="notification-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          <div class="notification-badge"></div>
-        </div>
         <div class="user-profile">
           <div class="avatar" id="userAvatar" style="background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-light);">A</div>
           <div class="user-info">
@@ -185,7 +184,7 @@
           <div class="dashboard-card">
             <div class="dashboard-card-title">
               <span>Top Organizers</span>
-              <a href="#" style="font-size: 13px; color: var(--accent-light); font-weight: normal;">View All</a>
+              <a href="404.html" style="font-size: 13px; color: var(--accent-light); font-weight: normal;">View All</a>
             </div>
             <div class="organizer-list">
               <div class="organizer-item">
@@ -220,7 +219,7 @@
         <div class="table-container animate-entry delay-3">
           <div class="table-header">
             <h3>Recent Events</h3>
-            <a href="#" onclick="document.querySelector('[data-target=\'events\']').click(); return false;" style="color: var(--accent-light); text-decoration: none; font-size: 14px;">View all</a>
+            <a href="404.html" style="color: var(--accent-light); text-decoration: none; font-size: 14px;">View all</a>
           </div>
           <div class="table-wrapper">
             <table class="admin-table">
@@ -251,8 +250,8 @@
                   <td>$45,000</td>
                   <td>
                     <div class="action-btns">
-                      <button class="action-btn" title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
-                      <button class="action-btn" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                      <a href="404.html" class="action-btn" title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                      <a href="404.html" class="action-btn" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></a>
                     </div>
                   </td>
                 </tr>
@@ -272,8 +271,8 @@
                   <td>$0</td>
                   <td>
                     <div class="action-btns">
-                      <button class="action-btn" title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
-                      <button class="action-btn" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                      <a href="404.html" class="action-btn" title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                      <a href="404.html" class="action-btn" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></a>
                     </div>
                   </td>
                 </tr>
@@ -293,7 +292,7 @@
                   <td>$12,500</td>
                   <td>
                     <div class="action-btns">
-                      <button class="action-btn" title="View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+                      <a href="404.html" class="action-btn" title="View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
                     </div>
                   </td>
                 </tr>
@@ -333,14 +332,14 @@
                   <td>Oct 15, 2026</td>
                   <td><span class="status-badge status-active">Active</span></td>
                   <td>2,000</td>
-                  <td><div class="action-btns"><button class="action-btn">Edit</button></div></td>
+                  <td><div class="action-btns"><a href="404.html" class="action-btn">Edit</a></div></td>
                 </tr>
                 <tr>
                   <td><div class="event-cell"><img src="assets/electronic-music.webp" alt="Event"><div><span class="name">Neon Nights Music Festival</span></div></div></td>
                   <td>Oct 28, 2026</td>
                   <td><span class="status-badge status-pending">Pending</span></td>
                   <td>5,000</td>
-                  <td><div class="action-btns"><button class="action-btn">Edit</button></div></td>
+                  <td><div class="action-btns"><a href="404.html" class="action-btn">Edit</a></div></td>
                 </tr>
               </tbody>
             </table>
@@ -447,7 +446,7 @@
               <input type="checkbox" id="maintMode" style="width: 18px; height:18px;">
               <label for="maintMode" style="font-size: 14px; font-weight: 500;">Enable Maintenance Mode</label>
             </div>
-            <button type="button" class="btn-primary" onclick="alert('Settings saved successfully!')">Save Configurations</button>
+            <a href="404.html" class="btn-primary">Save Configurations</a>
           </form>
         </div>
       </div>
@@ -459,10 +458,22 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menuToggle');
       const sidebar = document.getElementById('sidebar');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
 
       if(menuToggle && sidebar) {
         menuToggle.addEventListener('click', () => {
           sidebar.classList.toggle('active');
+          if (sidebarOverlay) {
+            sidebarOverlay.classList.toggle('active');
+          }
+        });
+      }
+
+      // Close sidebar when overlay is clicked
+      if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          sidebarOverlay.classList.remove('active');
         });
       }
 
@@ -492,6 +503,9 @@
           // On mobile, close sidebar after clicking a link
           if (window.innerWidth <= 768) {
              sidebar.classList.remove('active');
+             if (sidebarOverlay) {
+               sidebarOverlay.classList.remove('active');
+             }
           }
         });
       });
