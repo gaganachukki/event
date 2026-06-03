@@ -624,10 +624,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 140px 0 60px;
   position: relative;
   overflow: hidden;
-  text-alignvw;
+  text-align: center;
   box-sizing: border-box;
-  margin-left: calc(-50vw + 50%)
-  box-sizing: border-box;
+  margin-left: calc(-50vw + 50%);
 }
 
 .page-hero::before {
@@ -720,6 +719,195 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ========== NEW ANIMATIONS ========== */
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomInScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.3), 
+                inset 0 0 10px rgba(6, 182, 212, 0.1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.6), 
+                inset 0 0 20px rgba(6, 182, 212, 0.2);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounceScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-5px) rotate(-1deg); }
+  30% { transform: translateX(5px) rotate(1deg); }
+  45% { transform: translateX(-5px) rotate(-1deg); }
+  60% { transform: translateX(3px) rotate(1deg); }
+  75% { transform: translateX(-2px) rotate(-1deg); }
+}
+
+@keyframes swing {
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); }
+  70% { transform: scale(1); }
+}
+
+@keyframes flip {
+  from { transform: perspective(400px) rotateY(0); }
+  to { transform: perspective(400px) rotateY(360deg); }
+}
+
+@keyframes slideAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shadowPulse {
+  0%, 100% { 
+    box-shadow: 0 4px 20px rgba(6, 182, 212, 0.2);
+  }
+  50% { 
+    box-shadow: 0 8px 40px rgba(6, 182, 212, 0.4);
+  }
+}
+
+@keyframes scaleUpDown {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ========== SCROLL ANIMATION CLASSES ========== */
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -729,6 +917,315 @@ h1, h2, h3, h4, h5, h6 {
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ========== STAGGER ANIMATIONS ========== */
+.animate-on-scroll.delay-1 { animation-delay: 0.1s; }
+.animate-on-scroll.delay-2 { animation-delay: 0.2s; }
+.animate-on-scroll.delay-3 { animation-delay: 0.3s; }
+.animate-on-scroll.delay-4 { animation-delay: 0.4s; }
+.animate-on-scroll.delay-5 { animation-delay: 0.5s; }
+
+/* Stagger effect for grids */
+.grid-item:nth-child(1) { animation-delay: 0s; }
+.grid-item:nth-child(2) { animation-delay: 0.1s; }
+.grid-item:nth-child(3) { animation-delay: 0.2s; }
+.grid-item:nth-child(4) { animation-delay: 0.3s; }
+.grid-item:nth-child(5) { animation-delay: 0.4s; }
+.grid-item:nth-child(6) { animation-delay: 0.5s; }
+.grid-item:nth-child(n+7) { animation-delay: 0.6s; }
+
+/* ========== ENHANCED HOVER EFFECTS ========== */
+
+/* Button enhancements */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(6, 182, 212, 0.5);
+  animation: pulse 0.5s ease;
+}
+
+.btn-secondary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gradient);
+  opacity: 0.1;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn-secondary:hover::after {
+  left: 0;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  color: var(--accent-light);
+}
+
+/* Link hover effects */
+a {
+  position: relative;
+}
+
+/* ========== ENHANCED CARD HOVER EFFECTS ========== */
+
+.glass-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+  animation: shimmerEffect 0.6s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-6px);
+  background: var(--glass-bg);
+}
+
+.glass-card:hover {
+  animation: shadowPulse 0.6s ease;
+}
+
+/* ========== INPUT FOCUS EFFECTS ========== */
+
+input:focus,
+textarea:focus,
+select:focus {
+  animation: glow 0.3s ease;
+}
+
+input::placeholder {
+  transition: color 0.3s ease;
+}
+
+input:focus::placeholder {
+  color: var(--accent-light);
+}
+
+/* ========== INTERACTIVE ELEMENT EFFECTS ========== */
+
+.nav-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* ========== FORM ELEMENTS ========== */
+
+.form-group input,
+.form-group textarea {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+/* ========== IMAGE HOVER EFFECTS ========== */
+
+img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+a img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ========== LIST ITEM ANIMATIONS ========== */
+
+li {
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: translateX(4px);
+}
+
+/* ========== BADGE/TAG ANIMATIONS ========== */
+
+.badge, .tag, .label {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.badge:hover,
+.tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+/* ========== ICON ANIMATIONS ========== */
+
+svg {
+  transition: all 0.3s ease;
+}
+
+a:hover svg,
+button:hover svg,
+.nav-links a:hover svg {
+  transform: rotate(10deg) scale(1.1);
+  filter: drop-shadow(0 0 5px rgba(6, 182, 212, 0.5));
+}
+
+/* ========== SPECIAL ANIMATIONS ========== */
+
+/* Floating animation for hero elements */
+.float-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-element:nth-child(1) { animation-delay: 0s; }
+.float-element:nth-child(2) { animation-delay: 0.5s; }
+.float-element:nth-child(3) { animation-delay: 1s; }
+
+/* Bounce animation for CTAs */
+.bounce-animation {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Pulse animation for attention */
+.pulse-animation {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Glow animation for highlights */
+.glow-animation {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Gradient flow animation */
+.gradient-flow {
+  background-size: 200% 200%;
+  animation: gradientFlow 3s ease infinite;
+}
+
+/* ========== SCROLL-TRIGGERED ANIMATIONS ========== */
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.6s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.6s ease forwards;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.7s ease forwards;
+}
+
+.slide-in-down {
+  animation: slideInDown 0.7s ease forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.7s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.7s ease forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 0.6s ease forwards;
+}
+
+.scale-up-down {
+  animation: scaleUpDown 2s ease-in-out infinite;
+}
+
+/* ========== PARALLAX EFFECT ========== */
+
+[data-parallax] {
+  transition: transform 0.5s ease;
+}
+
+/* ========== LOADING ANIMATION ========== */
+
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--bg-card);
+  border-radius: 50%;
+  border-top-color: var(--accent-primary);
+  animation: rotate360 1s linear infinite;
+}
+
+/* ========== TEXT ANIMATIONS ========== */
+
+.text-shimmer {
+  background: linear-gradient(90deg, var(--text-primary), var(--accent-light), var(--text-primary));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 3s linear infinite;
+}
+
+/* ========== RIPPLE EFFECT ========== */
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 /* ---------- Back to Top ---------- */
