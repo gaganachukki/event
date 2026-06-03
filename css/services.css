@@ -503,6 +503,14 @@
     font-size: 13px;
   }
 
+  .package-card.featured {
+    transform: none;
+  }
+
+  .package-features {
+    text-align: center;
+  }
+
   .cta-card {
     padding: 60px 40px;
   }
@@ -513,6 +521,11 @@
 }
 
 @media (max-width: 480px) {
+  .packages-grid,
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
   .process-steps {
     grid-template-columns: 1fr;
     gap: 32px;

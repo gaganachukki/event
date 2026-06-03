@@ -548,7 +548,7 @@ function initGridStagger() {
   const grids = document.querySelectorAll('.grid, [class*="grid"]');
   
   grids.forEach(grid => {
-    const items = grid.querySelectorAll('[class*="item"], li, > div');
+    const items = grid.querySelectorAll('[class*="item"], li, :scope > div');
     items.forEach((item, index) => {
       item.style.animation = `fadeInUp 0.6s ease forwards`;
       item.style.animationDelay = `${index * 0.1}s`;

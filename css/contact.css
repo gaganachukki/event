@@ -237,6 +237,11 @@
   margin-bottom: 16px;
 }
 
+.map-header .section-subtitle {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .map-container {
   position: relative;
   border-radius: var(--radius-xl);

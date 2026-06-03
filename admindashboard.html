@@ -6,6 +6,7 @@
   <title>Admin Dashboard | Stackly</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/admindashboard.css">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
 </head>
 <body class="dashboard-body">
 
@@ -67,10 +68,10 @@
       </div>
       
       <div class="topbar-right">
-        <button class="btn-primary">
+        <a href="404.html"><button class="btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; margin-right: 6px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           New Event
-        </button>
+        </button></a>
         <div class="user-profile">
           <div class="avatar" id="userAvatar" style="background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-light);">A</div>
           <div class="user-info">
@@ -446,7 +447,7 @@
               <input type="checkbox" id="maintMode" style="width: 18px; height:18px;">
               <label for="maintMode" style="font-size: 14px; font-weight: 500;">Enable Maintenance Mode</label>
             </div>
-            <a href="404.html" class="btn-primary">Save Configurations</a>
+            <button id="saveConfigBtn" class="btn-primary" style="cursor: pointer;">Save Configurations</button>
           </form>
         </div>
       </div>
@@ -533,7 +534,41 @@
       
       const userAvatar = document.getElementById('userAvatar');
       if (userAvatar) userAvatar.textContent = initials;
+
+      // Handle Save Configurations button
+      const saveConfigBtn = document.getElementById('saveConfigBtn');
+      if (saveConfigBtn) {
+        saveConfigBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          // Show success toast
+          showToast('Configurations saved successfully!', 3000);
+          
+          // Change button appearance temporarily
+          const originalText = saveConfigBtn.textContent;
+          const originalBg = saveConfigBtn.style.background;
+          saveConfigBtn.textContent = '✓ Saved';
+          saveConfigBtn.style.background = 'rgba(34, 211, 238, 0.5)';
+          saveConfigBtn.disabled = true;
+          
+          // Redirect to overview after 1.5 seconds
+          setTimeout(() => {
+            // Trigger overview tab
+            const overviewNav = document.querySelector('.sidebar-nav .nav-item[data-target="overview"]');
+            if (overviewNav) {
+              overviewNav.click();
+            }
+            
+            // Reset button
+            saveConfigBtn.textContent = originalText;
+            saveConfigBtn.style.background = originalBg;
+            saveConfigBtn.disabled = false;
+          }, 1500);
+        });
+      }
     });
   </script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
