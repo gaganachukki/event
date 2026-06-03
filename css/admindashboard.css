@@ -28,8 +28,22 @@
   height: 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid var(--border-light);
+}
+
+.sidebar-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar-close-btn svg {
+  width: 24px;
+  height: 24px;
 }
 
 .sidebar-logo {
@@ -505,7 +519,8 @@
     visibility: visible;
   }
   
-  .menu-toggle-btn {
+  .menu-toggle-btn,
+  .sidebar-close-btn {
     display: block;
   }
   

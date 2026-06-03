@@ -16,6 +16,9 @@
       <a href="index.html" class="sidebar-logo">
         <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
       </a>
+      <button class="sidebar-close-btn" id="sidebarClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
     
     <nav class="sidebar-nav">
@@ -381,6 +384,16 @@
       const menuToggle = document.getElementById('menuToggle');
       const sidebar = document.getElementById('sidebar');
       const sidebarOverlay = document.getElementById('sidebarOverlay');
+      const sidebarClose = document.getElementById('sidebarClose');
+
+      if (sidebarClose && sidebar) {
+        sidebarClose.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          if (sidebarOverlay) {
+            sidebarOverlay.classList.remove('active');
+          }
+        });
+      }
 
       if(menuToggle && sidebar) {
         menuToggle.addEventListener('click', () => {
