@@ -376,3 +376,214 @@ function initSearch(inputSelector, itemsSelector) {
     });
   }, 300));
 }
+
+// ========= ENHANCED ANIMATIONS =========
+
+// --------- Advanced Scroll Animations ---------
+function initAdvancedScrollAnimations() {
+  // Fade in on scroll
+  const fadeElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .slide-in-up, .slide-in-left, .slide-in-right, .zoom-in');
+  
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        // Add stagger delay
+        const delay = index * 50;
+        setTimeout(() => {
+          element.style.opacity = '1';
+          element.style.visibility = 'visible';
+        }, delay);
+        fadeObserver.unobserve(element);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  fadeElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.visibility = 'hidden';
+    fadeObserver.observe(el);
+  });
+}
+
+// --------- Element Hover Glow Effect ---------
+function initHoverGlow() {
+  const glowElements = document.querySelectorAll('.glass-card, .btn-primary, .btn-secondary, a, .nav-links a');
+  
+  glowElements.forEach(element => {
+    element.addEventListener('mousemove', (e) => {
+      const rect = element.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      element.style.setProperty('--mouse-x', `${x}px`);
+      element.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+// --------- Counter Animation on Scroll ---------
+function initCounterAnimations() {
+  const counters = document.querySelectorAll('[data-counter]');
+  if (counters.length === 0) return;
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        const target = parseInt(entry.target.dataset.counter);
+        animateCounter(entry.target, target, 2000);
+        entry.target.classList.add('counted');
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+}
+
+// --------- Staggered List Animation ---------
+function initStaggeredListAnimation() {
+  const lists = document.querySelectorAll('ul:not(.nav-links), ol');
+  
+  lists.forEach(list => {
+    const items = list.querySelectorAll('li');
+    items.forEach((item, index) => {
+      item.style.animation = `slideInLeft 0.5s ease forwards`;
+      item.style.animationDelay = `${index * 0.1}s`;
+    });
+  });
+}
+
+// --------- Animated Background Gradient ---------
+function initAnimatedGradient() {
+  const gradientElements = document.querySelectorAll('.gradient-flow');
+  
+  gradientElements.forEach(el => {
+    // Already animated via CSS
+    el.style.backgroundSize = '200% 200%';
+  });
+}
+
+// --------- Button Ripple Effect ---------
+function initRippleEffect() {
+  const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, button');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const ripple = document.createElement('span');
+      const rect = button.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      
+      ripple.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        top: ${y}px;
+        left: ${x}px;
+        pointer-events: none;
+        animation: ripple 0.6s ease-out;
+      `;
+      
+      if (button.style.position === 'static') {
+        button.style.position = 'relative';
+      }
+      
+      button.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
+  });
+}
+
+// --------- Form Input Animation ---------
+function initFormInputAnimations() {
+  const inputs = document.querySelectorAll('input, textarea, select');
+  
+  inputs.forEach(input => {
+    // Focus animation
+    input.addEventListener('focus', () => {
+      input.parentElement.style.animation = 'pulse 0.3s ease';
+    });
+    
+    // Value change animation
+    input.addEventListener('change', () => {
+      input.style.animation = 'bounce 0.3s ease';
+    });
+  });
+}
+
+// --------- Scroll-linked Animation ---------
+function initScrollLinkedAnimation() {
+  const elements = document.querySelectorAll('[data-scroll-animation]');
+  
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const animationType = entry.target.dataset.scrollAnimation;
+        entry.target.classList.add(animationType);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => scrollObserver.observe(el));
+}
+
+// --------- Floating Animation for Elements ---------
+function initFloatingElements() {
+  const floatElements = document.querySelectorAll('[data-float]');
+  
+  floatElements.forEach(el => {
+    el.style.animation = 'float 3s ease-in-out infinite';
+  });
+}
+
+// --------- Grid Item Stagger ---------
+function initGridStagger() {
+  const grids = document.querySelectorAll('.grid, [class*="grid"]');
+  
+  grids.forEach(grid => {
+    const items = grid.querySelectorAll('[class*="item"], li, > div');
+    items.forEach((item, index) => {
+      item.style.animation = `fadeInUp 0.6s ease forwards`;
+      item.style.animationDelay = `${index * 0.1}s`;
+    });
+  });
+}
+
+// --------- Page Transition Animation ---------
+function initPageTransitions() {
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link || link.target === '_blank' || link.href.includes('#')) return;
+    
+    // Optional: Add fade-out animation
+    document.body.style.opacity = '1';
+    document.body.style.animation = 'fadeInUp 0.3s ease forwards';
+  });
+}
+
+// --------- Initialize All Animations ---------
+function initAllAnimations() {
+  initAdvancedScrollAnimations();
+  initHoverGlow();
+  initCounterAnimations();
+  initStaggeredListAnimation();
+  initAnimatedGradient();
+  initRippleEffect();
+  initFormInputAnimations();
+  initScrollLinkedAnimation();
+  initFloatingElements();
+  initGridStagger();
+  initPageTransitions();
+}
+
+// Run on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  initAllAnimations();
+});
